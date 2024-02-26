@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>q7.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #7a7e85;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+q7.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">random</span>
+<span class="s1">random_numbers </span><span class="s2">= []</span>
+<span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s3">10</span><span class="s2">):</span>
+    <span class="s1">random_numbers</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s1">random</span><span class="s2">.</span><span class="s1">randint</span><span class="s2">(</span><span class="s3">1</span><span class="s2">, </span><span class="s3">100</span><span class="s2">))</span>
+
+<span class="s4"># Remove odd numbers and double the even numbers</span>
+<span class="s1">processed_numbers </span><span class="s2">= [</span><span class="s1">num </span><span class="s2">* </span><span class="s3">2 </span><span class="s0">for </span><span class="s1">num </span><span class="s0">in </span><span class="s1">random_numbers </span><span class="s0">if </span><span class="s1">num </span><span class="s2">% </span><span class="s3">2 </span><span class="s2">== </span><span class="s3">0</span><span class="s2">]</span>
+
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Processed list:&quot;</span><span class="s2">, </span><span class="s1">processed_numbers</span><span class="s2">)</span>
+
+<span class="s0">import </span><span class="s1">random</span>
+<span class="s1">random_numbers </span><span class="s2">= []</span>
+<span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s3">10</span><span class="s2">):</span>
+    <span class="s1">random_numbers</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s1">random</span><span class="s2">.</span><span class="s1">randint</span><span class="s2">(</span><span class="s3">1</span><span class="s2">, </span><span class="s3">100</span><span class="s2">))</span>
+<span class="s1">processed_numbers </span><span class="s2">= []</span>
+<span class="s0">for </span><span class="s1">j </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">len</span><span class="s2">(</span><span class="s1">random_numbers</span><span class="s2">)):</span>
+    <span class="s0">if </span><span class="s1">random_numbers</span><span class="s2">[</span><span class="s1">j</span><span class="s2">] % </span><span class="s3">2 </span><span class="s2">== </span><span class="s3">0</span><span class="s2">:  </span><span class="s4"># Check if the number is even</span>
+        <span class="s1">processed_numbers</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s1">random_numbers</span><span class="s2">[</span><span class="s1">j</span><span class="s2">] * </span><span class="s3">2</span><span class="s2">)  </span><span class="s4"># Double it and add to the processed list</span>
+<span class="s4"># The processed list with odd numbers removed and even numbers doubled</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Processed list:&quot;</span><span class="s2">, </span><span class="s1">processed_numbers</span><span class="s2">)</span>
+
+</pre>
+</body>
+</html>

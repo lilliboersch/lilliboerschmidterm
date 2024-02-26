@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">re</span>
+<span class="s0">def </span><span class="s1">find_pattern_occurrences</span><span class="s2">(</span><span class="s1">text</span><span class="s2">):</span>
+    <span class="s1">pattern </span><span class="s2">= </span><span class="s3">r'C\w*jeb'</span>
+
+    <span class="s4"># Find all occurrences of the pattern</span>
+    <span class="s1">matches </span><span class="s2">= (</span><span class="s1">re</span><span class="s2">.</span><span class="s1">findall</span><span class="s2">(</span><span class="s1">pattern</span><span class="s2">, </span><span class="s1">text</span><span class="s2">))</span>
+
+    <span class="s4"># Return the number of matches</span>
+    <span class="s0">return </span><span class="s1">len</span><span class="s2">(</span><span class="s1">matches</span><span class="s2">)</span>
+
+<span class="s4"># Example usage:</span>
+<span class="s1">sample_text </span><span class="s2">= </span><span class="s3">&quot;Caaaaajeb has many different things than Cbbbbbjeb or Cjeb.&quot;</span>
+<span class="s1">number_of_matches </span><span class="s2">= </span><span class="s1">find_pattern_occurrences</span><span class="s2">(</span><span class="s1">sample_text</span><span class="s2">)</span>
+</pre>
+</body>
+</html>

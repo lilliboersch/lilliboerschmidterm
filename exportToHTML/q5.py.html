@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>q5.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #2aacb8;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+q5.py</font>
+</center></td></tr></table>
+<pre><span class="s0">def </span><span class="s1">find_cjeb_occurrences</span><span class="s2">(</span><span class="s1">text</span><span class="s2">):</span>
+    <span class="s3"># Split the text into words</span>
+    <span class="s1">words </span><span class="s2">= </span><span class="s1">text</span><span class="s2">.</span><span class="s1">split</span><span class="s2">()</span>
+    <span class="s3"># Initialize a counter for matches</span>
+    <span class="s1">count </span><span class="s2">= </span><span class="s4">0</span>
+    <span class="s3"># Loop through each word in the text</span>
+    <span class="s0">for </span><span class="s1">word </span><span class="s0">in </span><span class="s1">words</span><span class="s2">:</span>
+        <span class="s3"># Check if the word starts with 'C' and ends with 'jeb'</span>
+        <span class="s0">if </span><span class="s1">word</span><span class="s2">.</span><span class="s1">startswith</span><span class="s2">(</span><span class="s5">'C'</span><span class="s2">) </span><span class="s0">and </span><span class="s1">word</span><span class="s2">.</span><span class="s1">endswith</span><span class="s2">(</span><span class="s5">'jeb'</span><span class="s2">):</span>
+            <span class="s3"># If it does, increment the counter</span>
+            <span class="s1">count </span><span class="s2">+= </span><span class="s4">1</span>
+    <span class="s3"># Return the total count of matches</span>
+    <span class="s0">return </span><span class="s1">count</span>
+
+<span class="s3"># Example usage</span>
+<span class="s1">text </span><span class="s2">= </span><span class="s5">&quot;Cjeb starts with C and ends with jeb. So does Coooljeb, but not Cjebb or Ceeb.&quot;</span>
+<span class="s1">number_of_matches </span><span class="s2">= </span><span class="s1">find_cjeb_occurrences</span><span class="s2">(</span><span class="s1">text</span><span class="s2">)</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Number of matches:&quot;</span><span class="s2">, </span><span class="s1">number_of_matches</span><span class="s2">)</span>
+</pre>
+</body>
+</html>

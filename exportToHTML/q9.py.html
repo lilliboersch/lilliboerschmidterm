@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>q9.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+q9.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">datetime </span><span class="s0">import </span><span class="s1">datetime</span>
+
+
+<span class="s0">def </span><span class="s1">days_since_birthday</span><span class="s2">(</span><span class="s1">birthday_str</span><span class="s2">):</span>
+    <span class="s3"># Parse the birthday string into a datetime object</span>
+    <span class="s1">birthday </span><span class="s2">= </span><span class="s1">datetime</span><span class="s2">.</span><span class="s1">strptime</span><span class="s2">(</span><span class="s1">birthday_str</span><span class="s2">, </span><span class="s4">&quot;%d-%m-%Y&quot;</span><span class="s2">)</span>
+
+    <span class="s3"># Get the current date</span>
+    <span class="s1">current_date </span><span class="s2">= </span><span class="s1">datetime</span><span class="s2">.</span><span class="s1">now</span><span class="s2">()</span>
+
+    <span class="s3"># Calculate the difference in years</span>
+    <span class="s1">years_diff </span><span class="s2">= </span><span class="s1">current_date</span><span class="s2">.</span><span class="s1">year </span><span class="s2">- </span><span class="s1">birthday</span><span class="s2">.</span><span class="s1">year </span><span class="s2">- </span><span class="s5">1  </span><span class="s3"># Subtract 1 to not count the current year</span>
+
+    <span class="s3"># Initialize the count of days</span>
+    <span class="s1">days_count </span><span class="s2">= </span><span class="s5">0</span>
+
+    <span class="s3"># Count the days for the whole years</span>
+    <span class="s0">for </span><span class="s1">year </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">birthday</span><span class="s2">.</span><span class="s1">year </span><span class="s2">+ </span><span class="s5">1</span><span class="s2">, </span><span class="s1">current_date</span><span class="s2">.</span><span class="s1">year</span><span class="s2">):</span>
+        <span class="s3"># Check if the year is a leap year</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">year </span><span class="s2">% </span><span class="s5">4 </span><span class="s2">== </span><span class="s5">0 </span><span class="s0">and </span><span class="s1">year </span><span class="s2">% </span><span class="s5">100 </span><span class="s2">!= </span><span class="s5">0</span><span class="s2">) </span><span class="s0">or </span><span class="s2">(</span><span class="s1">year </span><span class="s2">% </span><span class="s5">400 </span><span class="s2">== </span><span class="s5">0</span><span class="s2">):</span>
+            <span class="s1">days_count </span><span class="s2">+= </span><span class="s5">366  </span><span class="s3"># Leap year</span>
+        <span class="s0">else</span><span class="s2">:</span>
+            <span class="s1">days_count </span><span class="s2">+= </span><span class="s5">365  </span><span class="s3"># Non-leap year</span>
+
+    <span class="s0">return </span><span class="s1">days_count</span>
+
+
+<span class="s3"># Your birthday in DD-MM-YYYY format</span>
+<span class="s1">your_birthday </span><span class="s2">= </span><span class="s4">&quot;04-03-2004&quot;</span>
+
+<span class="s3"># Calculate the days since your birthday</span>
+<span class="s1">days_since_your_birthday </span><span class="s2">= </span><span class="s1">days_since_birthday</span><span class="s2">(</span><span class="s1">your_birthday</span><span class="s2">)</span>
+<span class="s1">days_since_your_birthday</span>
+
+
+
+</pre>
+</body>
+</html>
