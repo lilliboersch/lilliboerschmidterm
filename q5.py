@@ -1,14 +1,18 @@
-import re
-def find_pattern_occurrences(text):
-    pattern = r'C\w*jeb'
+def find_cjeb_occurrences(text):
+    # Split the text into words
+    words = text.split()
+    # Initialize a counter for matches
+    count = 0
+    # Loop through each word in the text
+    for word in words:
+        # Check if the word starts with 'C' and ends with 'jeb'
+        if word.startswith('C') and word.endswith('jeb'):
+            # If it does, increment the counter
+            count += 1
+    # Return the total count of matches
+    return count
 
-    # Find all occurrences of the pattern
-    matches = (re.findall(pattern, text))
-
-    # Return the number of matches
-    return len(matches)
-
-
-# Example usage:
-sample_text = "Caaaaajeb has many different things than Cbbbbbjeb or Cjeb."
-number_of_matches = find_pattern_occurrences(sample_text)
+# Example usage
+text = "Cjeb starts with C and ends with jeb. So does Coooljeb, but not Cjebb or Ceeb."
+number_of_matches = find_cjeb_occurrences(text)
+print("Number of matches:", number_of_matches)
